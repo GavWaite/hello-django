@@ -24,7 +24,8 @@
           {% for board in boards %}
             <tr>
               <td>
-                {{ board.name }}
+                {% comment %} Add a Link to the appropriate board topic list  {% endcomment %}
+                <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
                 <small class="text-muted d-block">{{ board.description }}</small>
               </td>
               <td class="align-middle">0</td>
